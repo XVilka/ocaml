@@ -1,0 +1,15 @@
+image: freebsd/latest
+packages:
+    - devel/pkgconf
+    - devel/gmake
+    - x11/libX11
+environment:
+    CXX: gcc
+    CC: gcc
+sources:
+    - https://github.com/ocaml/ocaml
+tasks:
+    - build: |
+        cd ocaml
+        ./configure
+        gmake
